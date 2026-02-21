@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: read #This is required for actions/checkout
 
@@ -23,24 +23,17 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: Cache node modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: npm install, build, and test
         run: |
           npm install
           npm run build --if-present
-
+          npm run test --if-present
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: ./build
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,16 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A832341F1C474188B1DB712CD92D530F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_57551BBF4D734F93BA3D405EC2B69BF5 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6E3E8A16C36442689B7FAE137604A271 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_87E93E8F29904E4E890BBE56109A6C31 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_19B51BDD8750471CA72F3DFC7A9CABAA }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DF8D0FC6DE414B4DB0B067ADF19EFDB6 }}
 
       - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
+        id: deploy-to-webapp
         with:
           app-name: 'krystian-sitarz'
           slot-name: 'Production'
-          package: ./build
-
+          package: .
           
