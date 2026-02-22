@@ -45,6 +45,9 @@ CI / repository notes
 
 - A GitHub Actions workflow exists at [.github/workflows/master_krystian-sitarz.yml](.github/workflows/master_krystian-sitarz.yml). Run `npm run build` locally to validate CI expectations before pushing changes.
 
+Hosting
+- WebSite is hosted usign Azure App Service
+
 When updating documentation
 
 - Merge any human-written guidance instead of overwriting it. If you want, I can expand this README with deployment instructions (Netlify, Vercel), or add contributor/PR guidelines.
