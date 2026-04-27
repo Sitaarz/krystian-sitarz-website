@@ -11,7 +11,6 @@ import Redux from "../../Assets/TechIcons/Redux.svg";
 import Postman from "../../Assets/TechIcons/Postman.svg";
 import Angular from "../../Assets/TechIcons/Angular.svg";
 import Azure from "../../Assets/TechIcons/Azure.svg";
-import Cursor from "../../Assets/TechIcons/cursor-ai-code-icon.svg";
 
 function Techstack() {
   return (

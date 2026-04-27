@@ -4,6 +4,7 @@ import windows from "../../Assets/TechIcons/Windows.svg";
 import chrome from "../../Assets/TechIcons/Google Chrome.svg";
 import vsCode from "../../Assets/TechIcons/vscode.svg";
 import rider from "../../Assets/TechIcons/Rider.svg";
+import Cursor from "../../Assets/TechIcons/cursor-ai-code-icon.svg";
 
 function Toolstack() {
   return (
