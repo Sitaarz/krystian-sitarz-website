@@ -4,7 +4,6 @@ import Javascript from "../../Assets/TechIcons/Javascript.svg";
 import ReactIcon from "../../Assets/TechIcons/React.svg";
 import Typescript from "../../Assets/TechIcons/Typescript.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
-import Redis from "../../Assets/TechIcons/Redis.svg";
 import Docker from "../../Assets/TechIcons/Docker.svg";
 import SQL from "../../Assets/TechIcons/SQL.svg";
 import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
@@ -12,7 +11,7 @@ import Redux from "../../Assets/TechIcons/Redux.svg";
 import Postman from "../../Assets/TechIcons/Postman.svg";
 import Angular from "../../Assets/TechIcons/Angular.svg";
 import Azure from "../../Assets/TechIcons/Azure.svg";
-
+import Cursor from "../../Assets/TechIcons/cursor-ai-code-icon.svg";
 
 function Techstack() {
   return (
@@ -48,10 +47,6 @@ function Techstack() {
       </Col>
 
       <Col xs={4} md={2} className="tech-icons">
-        <img src={Redis} alt="redis" />
-        <div className="tech-icons-text">Redis</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <img src={Docker} alt="docker" />
         <div className="tech-icons-text">Docker</div>
       </Col>
@@ -74,6 +69,11 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <img src={Azure} alt="Azure" />
         <div className="tech-icons-text">Azure</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={Cursor} alt="Cursor" />
+        <div className="tech-icons-text">Cursor</div>
       </Col>
 
     </Row>
