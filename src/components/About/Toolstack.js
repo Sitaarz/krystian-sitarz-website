@@ -20,7 +20,10 @@ function Toolstack() {
         <img src={vsCode} alt="vsCode" className="tech-icon-images" />
         <div className="tech-icons-text">Vs Code</div>
       </Col>
-
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={Cursor} alt="Cursor" />
+        <div className="tech-icons-text">Cursor</div>
+      </Col>
       <Col xs={4} md={2} className="tech-icons ">
         <img src={rider} alt="Rider" className="tech-icon-images" />
         <div className="tech-icons-text">Rider</div>
