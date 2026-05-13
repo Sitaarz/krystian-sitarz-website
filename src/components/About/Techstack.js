@@ -11,10 +11,27 @@ import Redux from "../../Assets/TechIcons/Redux.svg";
 import Postman from "../../Assets/TechIcons/Postman.svg";
 import Angular from "../../Assets/TechIcons/Angular.svg";
 import Azure from "../../Assets/TechIcons/Azure.svg";
+import net from "../../Assets/TechIcons/dotnet-svgrepo-com.svg";
+import cSharp from "../../Assets/TechIcons/C# (CSharp).svg";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={cSharp} alt="C#" />
+        <div className="tech-icons-text">C#</div>
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={net} alt=".NET" />
+        <div className="tech-icons-text">.NET</div>
+      </Col>
+            
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={Azure} alt="Azure" />
+        <div className="tech-icons-text">Azure</div>
+      </Col>
 
       <Col xs={4} md={2} className="tech-icons">
         <img src={Javascript} alt="javascript" />
@@ -63,13 +80,6 @@ function Techstack() {
         <img src={Postman} alt="Postman" />
         <div className="tech-icons-text">Postman</div>
       </Col>
-
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Azure} alt="Azure" />
-        <div className="tech-icons-text">Azure</div>
-      </Col>
-
 
     </Row>
   );
